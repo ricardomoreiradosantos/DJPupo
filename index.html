@@ -1,199 +1,543 @@
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>DJ Pupo Events</title>
-    <meta name="description" content="An app made by https://hercules.app" />
-    <meta name="author" content="Hercules" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"
-    />
-
-    <meta property="og:title" content="Hercules App" />
-    <meta
-      property="og:description"
-      content="An app made by https://hercules.app"
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://hercules.app/og/app/01KXBP8ST2GAWEZZQDZ71ZTFWD.png"
-    />
-    <meta property="og:image:type" content="image/png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:image"
-      content="https://hercules.app/og/app/01KXBP8ST2GAWEZZQDZ71ZTFWD.png"
-    />
-    <meta name="twitter:site" content="@usehercules" />
-
-    <!-- Fonts -->
-    
-    
-    <style type="text/css">@font-face {font-family:Fira Code;font-style:normal;font-weight:300 700;src:url(/cf-fonts/v/fira-code/5.2.7/greek/wght/normal.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:Fira Code;font-style:normal;font-weight:300 700;src:url(/cf-fonts/v/fira-code/5.2.7/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Fira Code;font-style:normal;font-weight:300 700;src:url(/cf-fonts/v/fira-code/5.2.7/symbols2/wght/normal.woff2);unicode-range:U+2000-2001,U+2004-2008,U+200A,U+23B8-23BD,U+2500-259F;font-display:swap;}@font-face {font-family:Fira Code;font-style:normal;font-weight:300 700;src:url(/cf-fonts/v/fira-code/5.2.7/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Fira Code;font-style:normal;font-weight:300 700;src:url(/cf-fonts/v/fira-code/5.2.7/greek-ext/wght/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Fira Code;font-style:normal;font-weight:300 700;src:url(/cf-fonts/v/fira-code/5.2.7/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Fira Code;font-style:normal;font-weight:300 700;src:url(/cf-fonts/v/fira-code/5.2.7/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Geist Mono;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/geist-mono/5.2.7/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Geist Mono;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/geist-mono/5.2.7/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Geist Mono;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/geist-mono/5.2.7/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Geist;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/geist/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Geist;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/geist/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Geist;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/geist/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/inter/5.2.8/cyrillic-ext/opsz/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/inter/5.2.8/greek-ext/opsz/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/inter/5.2.8/latin/opsz/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/inter/5.2.8/latin-ext/opsz/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/inter/5.2.8/cyrillic/opsz/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/inter/5.2.8/vietnamese/opsz/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Inter;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/inter/5.2.8/greek/opsz/normal.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:Inter;font-style:italic;font-weight:100 900;src:url(/cf-fonts/v/inter/5.2.8/latin/opsz/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Inter;font-style:italic;font-weight:100 900;src:url(/cf-fonts/v/inter/5.2.8/greek/opsz/italic.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:Inter;font-style:italic;font-weight:100 900;src:url(/cf-fonts/v/inter/5.2.8/latin-ext/opsz/italic.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Inter;font-style:italic;font-weight:100 900;src:url(/cf-fonts/v/inter/5.2.8/cyrillic/opsz/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Inter;font-style:italic;font-weight:100 900;src:url(/cf-fonts/v/inter/5.2.8/greek-ext/opsz/italic.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Inter;font-style:italic;font-weight:100 900;src:url(/cf-fonts/v/inter/5.2.8/cyrillic-ext/opsz/italic.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Inter;font-style:italic;font-weight:100 900;src:url(/cf-fonts/v/inter/5.2.8/vietnamese/opsz/italic.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:JetBrains Mono;font-style:normal;font-weight:100 800;src:url(/cf-fonts/v/jetbrains-mono/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:JetBrains Mono;font-style:normal;font-weight:100 800;src:url(/cf-fonts/v/jetbrains-mono/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:JetBrains Mono;font-style:normal;font-weight:100 800;src:url(/cf-fonts/v/jetbrains-mono/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:JetBrains Mono;font-style:normal;font-weight:100 800;src:url(/cf-fonts/v/jetbrains-mono/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:JetBrains Mono;font-style:normal;font-weight:100 800;src:url(/cf-fonts/v/jetbrains-mono/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:JetBrains Mono;font-style:normal;font-weight:100 800;src:url(/cf-fonts/v/jetbrains-mono/5.2.8/greek/wght/normal.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:JetBrains Mono;font-style:italic;font-weight:100 800;src:url(/cf-fonts/v/jetbrains-mono/5.2.8/cyrillic-ext/wght/italic.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:JetBrains Mono;font-style:italic;font-weight:100 800;src:url(/cf-fonts/v/jetbrains-mono/5.2.8/greek/wght/italic.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:JetBrains Mono;font-style:italic;font-weight:100 800;src:url(/cf-fonts/v/jetbrains-mono/5.2.8/latin/wght/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:JetBrains Mono;font-style:italic;font-weight:100 800;src:url(/cf-fonts/v/jetbrains-mono/5.2.8/cyrillic/wght/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:JetBrains Mono;font-style:italic;font-weight:100 800;src:url(/cf-fonts/v/jetbrains-mono/5.2.8/latin-ext/wght/italic.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:JetBrains Mono;font-style:italic;font-weight:100 800;src:url(/cf-fonts/v/jetbrains-mono/5.2.8/vietnamese/wght/italic.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/montserrat/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/montserrat/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/montserrat/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/montserrat/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Montserrat;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/montserrat/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Montserrat;font-style:italic;font-weight:100 900;src:url(/cf-fonts/v/montserrat/5.2.8/cyrillic/wght/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Montserrat;font-style:italic;font-weight:100 900;src:url(/cf-fonts/v/montserrat/5.2.8/latin-ext/wght/italic.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Montserrat;font-style:italic;font-weight:100 900;src:url(/cf-fonts/v/montserrat/5.2.8/cyrillic-ext/wght/italic.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Montserrat;font-style:italic;font-weight:100 900;src:url(/cf-fonts/v/montserrat/5.2.8/latin/wght/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Montserrat;font-style:italic;font-weight:100 900;src:url(/cf-fonts/v/montserrat/5.2.8/vietnamese/wght/italic.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Noto Serif;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/noto-serif/5.2.9/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Noto Serif;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/noto-serif/5.2.9/greek-ext/wght/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Noto Serif;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/noto-serif/5.2.9/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Noto Serif;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/noto-serif/5.2.9/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Noto Serif;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/noto-serif/5.2.9/math/wght/normal.woff2);unicode-range:U+0302-0303,U+0305,U+0307-0308,U+0310,U+0312,U+0315,U+031A,U+0326-0327,U+032C,U+032F-0330,U+0332-0333,U+0338,U+033A,U+0346,U+034D,U+0391-03A1,U+03A3-03A9,U+03B1-03C9,U+03D1,U+03D5-03D6,U+03F0-03F1,U+03F4-03F5,U+2016-2017,U+2034-2038,U+203C,U+2040,U+2043,U+2047,U+2050,U+2057,U+205F,U+2070-2071,U+2074-208E,U+2090-209C,U+20D0-20DC,U+20E1,U+20E5-20EF,U+2100-2112,U+2114-2115,U+2117-2121,U+2123-214F,U+2190,U+2192,U+2194-21AE,U+21B0-21E5,U+21F1-21F2,U+21F4-2211,U+2213-2214,U+2216-22FF,U+2308-230B,U+2310,U+2319,U+231C-2321,U+2336-237A,U+237C,U+2395,U+239B-23B7,U+23D0,U+23DC-23E1,U+2474-2475,U+25AF,U+25B3,U+25B7,U+25BD,U+25C1,U+25CA,U+25CC,U+25FB,U+266D-266F,U+27C0-27FF,U+2900-2AFF,U+2B0E-2B11,U+2B30-2B4C,U+2BFE,U+3030,U+FF5B,U+FF5D,U+1D400-1D7FF,U+1EE00-1EEFF;font-display:swap;}@font-face {font-family:Noto Serif;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/noto-serif/5.2.9/greek/wght/normal.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:Noto Serif;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/noto-serif/5.2.9/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Noto Serif;font-style:normal;font-weight:100 900;src:url(/cf-fonts/v/noto-serif/5.2.9/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Noto Serif;font-style:italic;font-weight:100 900;src:url(/cf-fonts/v/noto-serif/5.2.9/math/wght/italic.woff2);unicode-range:U+0302-0303,U+0305,U+0307-0308,U+0310,U+0312,U+0315,U+031A,U+0326-0327,U+032C,U+032F-0330,U+0332-0333,U+0338,U+033A,U+0346,U+034D,U+0391-03A1,U+03A3-03A9,U+03B1-03C9,U+03D1,U+03D5-03D6,U+03F0-03F1,U+03F4-03F5,U+2016-2017,U+2034-2038,U+203C,U+2040,U+2043,U+2047,U+2050,U+2057,U+205F,U+2070-2071,U+2074-208E,U+2090-209C,U+20D0-20DC,U+20E1,U+20E5-20EF,U+2100-2112,U+2114-2115,U+2117-2121,U+2123-214F,U+2190,U+2192,U+2194-21AE,U+21B0-21E5,U+21F1-21F2,U+21F4-2211,U+2213-2214,U+2216-22FF,U+2308-230B,U+2310,U+2319,U+231C-2321,U+2336-237A,U+237C,U+2395,U+239B-23B7,U+23D0,U+23DC-23E1,U+2474-2475,U+25AF,U+25B3,U+25B7,U+25BD,U+25C1,U+25CA,U+25CC,U+25FB,U+266D-266F,U+27C0-27FF,U+2900-2AFF,U+2B0E-2B11,U+2B30-2B4C,U+2BFE,U+3030,U+FF5B,U+FF5D,U+1D400-1D7FF,U+1EE00-1EEFF;font-display:swap;}@font-face {font-family:Noto Serif;font-style:italic;font-weight:100 900;src:url(/cf-fonts/v/noto-serif/5.2.9/vietnamese/wght/italic.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Noto Serif;font-style:italic;font-weight:100 900;src:url(/cf-fonts/v/noto-serif/5.2.9/latin-ext/wght/italic.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Noto Serif;font-style:italic;font-weight:100 900;src:url(/cf-fonts/v/noto-serif/5.2.9/greek/wght/italic.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:Noto Serif;font-style:italic;font-weight:100 900;src:url(/cf-fonts/v/noto-serif/5.2.9/greek-ext/wght/italic.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:Noto Serif;font-style:italic;font-weight:100 900;src:url(/cf-fonts/v/noto-serif/5.2.9/latin/wght/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Noto Serif;font-style:italic;font-weight:100 900;src:url(/cf-fonts/v/noto-serif/5.2.9/cyrillic-ext/wght/italic.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Noto Serif;font-style:italic;font-weight:100 900;src:url(/cf-fonts/v/noto-serif/5.2.9/cyrillic/wght/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}</style>
-
-    <!-- Detect dark mode preference and set the class before next-themes loads. This avoids a flash of unstyled content (FOUC) when the page loads. -->
-    <script>
-      try {
-        let theme = localStorage.getItem("theme");
-        if (theme === "system" || !theme) {
-          let prefersDark = window.matchMedia(
-            "(prefers-color-scheme: dark)",
-          ).matches;
-          theme = prefersDark ? "dark" : "light";
-        }
-        document.documentElement.classList.add(theme);
-      } catch (e) {}
-    </script>
-
-    <script type="module" crossorigin src="/assets/index-BAhlyV00.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DbCsQRn8.css">
-  <script type="module" src="/_hercules/i.js?websiteId=01KXBP8ST2GAWEZZQDZ71ZTFWD&organizationId=org_01KXBP8PESFDQE46TA834PQ576"></script></head>
-  <body>
-    <div id="root"></div>
-  <script>
-  (function () {
-    function initHerculesBadge() {
-      const badge = document.getElementById("acc512e5");
-      if (!badge) return;
-
-      // Get referral information
-      const hostname = window.location.hostname || "unknown";
-      const fullUrl = encodeURIComponent(window.location.href);
-
-      // Build tracking URL with UTM parameters
-      const baseUrl = "https://hercules.app";
-      const params = new URLSearchParams({
-        utm_source: hostname,
-        utm_medium: "watermark_banner",
-        utm_campaign: "built_with_hercules",
-        referrer: fullUrl,
-      });
-
-      // Update the CTA href with tracking parameters
-      const cta = document.getElementById("acc512e5-cta");
-      if (cta) {
-        cta.href = baseUrl + "?" + params.toString();
-      }
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DJ Pupo · Produções & Eventos</title>
+  <!-- Font & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    // Initialize when DOM is ready
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", initHerculesBadge);
-    } else {
-      initHerculesBadge();
+    body {
+      background: #0b0a0c;
+      font-family: 'Inter', sans-serif;
+      color: #f0edf2;
+      line-height: 1.5;
+      overflow-x: hidden;
     }
-  })();
-</script>
-<aside
-  id="acc512e5"
-  role="complementary"
-  aria-label="Built with Hercules"
-  style="
-    position: fixed;
-    bottom: 16px;
-    right: 16px;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    gap: 0;
-    font-family:
-      -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;,
-      Arial, sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    pointer-events: none;
-    user-select: none;
-    background-color: #1a1a1a;
-    color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-  "
->
-  <a
-    id="acc512e5-cta"
-    href="https://hercules.app"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Built with Hercules"
-    style="
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1a181c;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #b7a4c9;
+      border-radius: 8px;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* futuristic glass + glow */
+    .glass-card {
+      background: rgba(20, 18, 24, 0.65);
+      backdrop-filter: blur(8px) saturate(180%);
+      -webkit-backdrop-filter: blur(8px) saturate(180%);
+      border: 1px solid rgba(255, 215, 250, 0.15);
+      border-radius: 40px;
+      box-shadow: 0 20px 40px -12px rgba(0,0,0,0.8), 0 0 0 1px rgba(200, 170, 255, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .section-title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #f2e6ff, #d4b8f0);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 1.2rem;
+      text-shadow: 0 0 20px rgba(180, 130, 255, 0.2);
+    }
+
+    .section-sub {
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: #bfb6cc;
+      letter-spacing: 0.3px;
+    }
+
+    /* header */
+    .navbar {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 6px;
-      padding: 8px 12px;
+      padding: 20px 0;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.9rem;
+      font-weight: 800;
+      background: linear-gradient(145deg, #f0e4ff, #c7b0e3);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -1px;
+    }
+    .logo span {
+      font-weight: 300;
+      color: #a28bb8;
+      background: none;
+      -webkit-background-clip: unset;
+      background-clip: unset;
+    }
+
+    .nav-links a {
+      color: #cdc2db;
       text-decoration: none;
-      color: inherit;
-      white-space: nowrap;
-      pointer-events: auto;
-    "
-  >
-    <svg
-      width="14"
-      height="14"
-      viewBox="0 0 16 16"
-      fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-      style="flex-shrink: 0"
-    >
-      <path d="m7.99 0-7.01 9.38 6.02-.42-4.96 7.04 12.96-10-7.01.47 7.01-6.47z"></path>
-    </svg>
-    <span>Built with <strong>Hercules</strong></span>
-  </a>
-</aside>
-<style>
-  /* Light mode styles */
-  @media (prefers-color-scheme: light) {
-    #acc512e5 {
-      background-color: #1a1a1a !important;
-      color: #ffffff !important;
+      margin-left: 32px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: 0.2s;
+      border-bottom: 1px solid transparent;
+    }
+    .nav-links a:hover {
+      color: #fff;
+      border-bottom-color: #b392d6;
     }
 
-    #acc512e5-cta:hover {
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
-    }
-  }
-
-  /* Dark mode styles */
-  @media (prefers-color-scheme: dark) {
-    #acc512e5 {
-      background-color: #1a1a1a !important;
-      color: #ffffff !important;
-      box-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.4),
-        0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+    /* hero */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 40px 0 60px;
     }
 
-    #acc512e5-cta:hover {
-      box-shadow:
-        0 4px 12px rgba(0, 0, 0, 0.5),
-        0 0 0 1px rgba(255, 255, 255, 0.15) !important;
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 30px;
+      align-items: center;
     }
-  }
 
-  #acc512e5-cta:hover {
-    background-color: rgba(255, 255, 255, 0.08);
-  }
-
-  @media (max-width: 640px) {
-    #acc512e5 {
-      bottom: 12px !important;
-      right: 12px !important;
-      font-size: 12px !important;
+    .hero h1 {
+      font-size: 3.8rem;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
     }
-  }
-
-  @media print {
-    #acc512e5 {
-      display: none !important;
+    .hero h1 .highlight {
+      background: linear-gradient(145deg, #f2d9ff, #c59df0);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
-  }
-</style>
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #cbc0d9;
+      max-width: 500px;
+      margin-top: 16px;
+    }
+
+    .btn-glow {
+      display: inline-block;
+      background: linear-gradient(145deg, #7f5faa, #a578d1);
+      padding: 14px 44px;
+      border-radius: 60px;
+      font-weight: 700;
+      color: #0b0a0c;
+      text-decoration: none;
+      margin-top: 28px;
+      box-shadow: 0 0 30px rgba(150, 100, 220, 0.3);
+      transition: 0.3s;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .btn-glow:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 50px #b286e0;
+      background: linear-gradient(145deg, #9370c9, #b28be0);
+    }
+
+    .hero-image {
+      position: relative;
+      border-radius: 40px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+      background: #1a1720;
+    }
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 0.9;
+      transition: 0.5s;
+    }
+    .hero-image:hover img {
+      transform: scale(1.02);
+      opacity: 1;
+    }
+
+    /* video / slide section */
+    .media-showcase {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin: 60px 0;
+    }
+
+    .media-box {
+      border-radius: 36px;
+      overflow: hidden;
+      background: #141117;
+      border: 1px solid #312b38;
+      box-shadow: 0 15px 30px -10px black;
+      transition: 0.3s;
+    }
+    .media-box:hover {
+      border-color: #aa86d0;
+      box-shadow: 0 0 35px rgba(170, 120, 220, 0.2);
+    }
+
+    .media-box video, .media-box iframe {
+      width: 100%;
+      display: block;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: #0e0c10;
+    }
+    .media-box .caption {
+      padding: 16px 20px;
+      background: #111016;
+      font-weight: 500;
+      color: #d8cee6;
+      border-top: 1px solid #2a2532;
+    }
+
+    .carousel-slide {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      padding: 6px 2px 20px;
+      scrollbar-width: thin;
+      scrollbar-color: #b392d6 #1f1b24;
+    }
+    .carousel-slide img {
+      min-width: 200px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 24px;
+      border: 1px solid #3d3447;
+      transition: 0.3s;
+      filter: brightness(0.8);
+    }
+    .carousel-slide img:hover {
+      filter: brightness(1);
+      transform: scale(1.02);
+      border-color: #b392d6;
+    }
+
+    /* cards */
+    .offer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px;
+      margin: 40px 0 20px;
+    }
+
+    .offer-item {
+      background: rgba(24, 21, 29, 0.7);
+      backdrop-filter: blur(4px);
+      padding: 24px 16px;
+      border-radius: 32px;
+      text-align: center;
+      border: 1px solid #322c3b;
+      transition: 0.25s;
+      font-weight: 500;
+      color: #dfd6ec;
+    }
+    .offer-item i {
+      font-size: 2rem;
+      color: #b392d6;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .offer-item:hover {
+      border-color: #b392d6;
+      background: #1d1825;
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+    }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin: 50px 0;
+    }
+
+    .testi-card {
+      background: #16131c;
+      padding: 32px 24px;
+      border-radius: 40px;
+      border: 1px solid #312a3b;
+      transition: 0.2s;
+    }
+    .testi-card:hover {
+      border-color: #b392d6;
+      box-shadow: 0 0 30px rgba(150, 100, 200, 0.1);
+    }
+    .testi-card .stars {
+      color: #e4c27a;
+      letter-spacing: 4px;
+      font-size: 1.2rem;
+    }
+    .testi-card p {
+      font-size: 1rem;
+      margin: 16px 0;
+      color: #ddd2ec;
+    }
+
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px 50px;
+      justify-content: center;
+      margin: 40px 0;
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #dac4f5, #b18bda);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .stat-label {
+      color: #b7aac8;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+
+    .awards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      background: #131017;
+      border-radius: 60px;
+      padding: 30px 40px;
+      border: 1px solid #372f42;
+      margin: 40px 0;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .awards img {
+      height: 50px;
+      filter: drop-shadow(0 0 8px #b392d6);
+    }
+
+    .client-logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px 40px;
+      justify-content: center;
+      padding: 20px 0 40px;
+      opacity: 0.8;
+    }
+    .client-logos span {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #bfb2d6;
+      letter-spacing: 1px;
+    }
+
+    .footer {
+      border-top: 1px solid #28222f;
+      padding: 40px 0 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+    .footer a {
+      color: #bcadd1;
+      text-decoration: none;
+      margin-right: 24px;
+      transition: 0.2s;
+    }
+    .footer a:hover { color: white; }
+
+    /* Responsive */
+    @media (max-width: 800px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .media-showcase { grid-template-columns: 1fr; }
+      .section-title { font-size: 2.2rem; }
+      .hero h1 { font-size: 2.8rem; }
+      .nav-links a { margin-left: 16px; }
+      .awards { flex-direction: column; text-align: center; }
+    }
+
+    /* extra futurista */
+    .glow-line {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #b392d6, #b392d6, transparent);
+      width: 100%;
+      margin: 10px 0 30px;
+      opacity: 0.3;
+    }
+
+    .badge-premium {
+      display: inline-block;
+      background: #1a1422;
+      padding: 4px 18px;
+      border-radius: 40px;
+      border: 1px solid #624a7a;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      color: #d2baf0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- header -->
+    <nav class="navbar">
+      <div class="logo">DJ PUPO <span>· PRODUÇÕES</span></div>
+      <div class="nav-links">
+        <a href="#">Eventos</a>
+        <a href="#">Portfólio</a>
+        <a href="#">Depoimentos</a>
+        <a href="#">Contato</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <span class="badge-premium"><i class="fas fa-certificate"></i> +25 anos</span>
+          <h1>Transformando eventos em <span class="highlight">experiências</span> inesquecíveis.</h1>
+          <p>Som, luz, tecnologia e emoção em perfeita sintonia. Cada detalhe pensado para surpreender.</p>
+          <a href="#" class="btn-glow"><i class="fas fa-play" style="margin-right: 12px;"></i>SOLICITE ORÇAMENTO</a>
+        </div>
+        <div class="hero-image glass-card">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%2316121e'/%3E%3Ccircle cx='300' cy='200' r='80' fill='%239070b0' opacity='0.3'/%3E%3Ccircle cx='250' cy='150' r='40' fill='%23b392d6' opacity='0.2'/%3E%3Cpath d='M150 250 L450 250 L400 320 L200 320 Z' fill='%237f5faa' opacity='0.2'/%3E%3Ctext x='120' y='240' fill='%23d4c0ee' font-family='Inter' font-size='28' font-weight='bold'%3EDJ PUPO%3C/text%3E%3C/svg%3E"
+               alt="DJ Pupo" style="width:100%; height:100%; object-fit:cover; min-height:300px;">
+        </div>
+      </div>
+    </section>
+
+    <!-- O QUE OFERECEMOS + PRODUÇÃO -->
+    <div class="glass-card" style="padding: 30px 32px; margin: 10px 0 30px;">
+      <h2 class="section-title" style="font-size: 2rem;"><i class="fas fa-sliders-h" style="color:#b392d6; margin-right: 16px;"></i> O QUE OFERECEMOS</h2>
+      <div class="offer-grid">
+        <div class="offer-item"><i class="fas fa-microphone-alt"></i> Som Profissional</div>
+        <div class="offer-item"><i class="fas fa-lightbulb"></i> Iluminação</div>
+        <div class="offer-item"><i class="fas fa-tv"></i> TELÃO LED</div>
+        <div class="offer-item"><i class="fas fa-road"></i> Pista de LED</div>
+        <div class="offer-item"><i class="fas fa-camera"></i> Plataforma 360°</div>
+        <div class="offer-item"><i class="fas fa-camera-retro"></i> Cabine Fotográfica</div>
+        <div class="offer-item"><i class="fas fa-robot"></i> Robôs de LED</div>
+        <div class="offer-item"><i class="fas fa-image"></i> Totem de Fotos</div>
+        <div class="offer-item"><i class="fas fa-compact-disc"></i> DJ Profissional</div>
+        <div class="offer-item"><i class="fas fa-headphones"></i> Mixagem ao vivo</div>
+        <div class="offer-item"><i class="fas fa-users"></i> Interação com público</div>
+        <div class="offer-item"><i class="fas fa-music"></i> Repertório personalizado</div>
+      </div>
+    </div>
+
+    <!-- VIDEO + SLIDE CARROSSEL -->
+    <div class="media-showcase">
+      <div class="media-box">
+        <video controls poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='225' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23171320'/%3E%3Ccircle cx='200' cy='112' r='40' fill='%239070b0' opacity='0.5'/%3E%3Ctext x='120' y='130' fill='%23c7b0e3' font-family='Inter' font-size='28'%3E▶%3C/text%3E%3C/svg%3E">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        </video>
+        <div class="caption"><i class="fas fa-video" style="margin-right: 10px; color:#b392d6;"></i> Vídeo institucional · DJ Pupo</div>
+      </div>
+      <div class="media-box">
+        <div style="padding: 8px 16px 0; font-weight:600; color:#c5b6db;">SLIDE · Momentos</div>
+        <div class="carousel-slide">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='140' viewBox='0 0 200 140'%3E%3Crect width='200' height='140' fill='%23211c2b'/%3E%3Ccircle cx='100' cy='70' r='30' fill='%239070b0' opacity='0.4'/%3E%3Ctext x='50' y='90' fill='%23b392d6' font-size='18'%3E🎧%3C/text%3E%3C/svg%3E" alt="evento 1">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='140' viewBox='0 0 200 140'%3E%3Crect width='200' height='140' fill='%23211c2b'/%3E%3Crect x='40' y='40' width='120' height='60' fill='%239070b0' opacity='0.3'/%3E%3Ctext x='70' y='80' fill='%23b392d6' font-size='22'%3E🎶%3C/text%3E%3C/svg%3E" alt="evento 2">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='140' viewBox='0 0 200 140'%3E%3Crect width='200' height='140' fill='%23211c2b'/%3E%3Ccircle cx='80' cy='60' r='25' fill='%239070b0' opacity='0.5'/%3E%3Ccircle cx='130' cy='80' r='25' fill='%239070b0' opacity='0.3'/%3E%3Ctext x='70' y='110' fill='%23b392d6' font-size='18'%3E✨%3C/text%3E%3C/svg%3E" alt="evento 3">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='140' viewBox='0 0 200 140'%3E%3Crect width='200' height='140' fill='%23211c2b'/%3E%3Cpath d='M40 70 L160 70 L130 100 L70 100 Z' fill='%239070b0' opacity='0.4'/%3E%3Ctext x='80' y='85' fill='%23b392d6' font-size='20'%3E🔥%3C/text%3E%3C/svg%3E" alt="evento 4">
+        </div>
+        <div style="padding: 4px 16px 12px; font-size:0.85rem; color:#a28bb8;"><i class="fas fa-arrow-right"></i> Arraste para ver mais</div>
+      </div>
+    </div>
+
+    <!-- QUEM É O DJ PUPO -->
+    <div class="glass-card" style="padding: 32px 36px; margin: 30px 0;">
+      <h2 class="section-title" style="font-size:2.2rem;">QUEM É O DJ PUPO?</h2>
+      <p style="color:#d8cee6; max-width:800px;">Mais do que um DJ, DJ Pupo é um profissional especializado em criar experiências memoráveis por meio da música, animação e produção de eventos. Com mais de 25 anos, construiu reputação com profissionalismo, energia e excelência. Formado pela Rhythm Audio, atua em eventos sociais, corporativos e esportivos.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:30px; margin-top:24px;">
+        <span><i class="fas fa-briefcase" style="color:#b392d6;"></i> Eventos Corporativos</span>
+        <span><i class="fas fa-ring" style="color:#b392d6;"></i> Casamentos</span>
+        <span><i class="fas fa-birthday-cake" style="color:#b392d6;"></i> Aniversários</span>
+        <span><i class="fas fa-futbol" style="color:#b392d6;"></i> Arenas Esportivas</span>
+        <span><i class="fas fa-star" style="color:#b392d6;"></i> Eventos Premium</span>
+      </div>
+      <div style="margin-top: 20px; background: #1b1723; border-radius: 40px; padding: 16px 24px; border-left: 4px solid #b392d6;">
+        <p style="font-weight:300; color:#d0c3e3;"><i class="fas fa-quote-left" style="margin-right:12px; color:#b392d6;"></i>Em 2022, abriu o show da banda Jota Quest em evento corporativo em Itu. Desde 2021, especialista em animação de arenas de Beach Tennis.</p>
+      </div>
+    </div>
+
+    <!-- FEEDBACKS E DEPOIMENTOS -->
+    <h2 class="section-title" style="margin-top: 40px;"><i class="fas fa-star" style="color:#e4c27a; margin-right: 16px;"></i> O que nossos CLIENTES DIZEM</h2>
+    <div class="testimonials">
+      <div class="testi-card"><div class="stars">★★★★★</div><p>“Excelência que se ouve, se sente e se recomenda! Transformou nossa festa em um espetáculo.”</p><span style="color:#a28bb8;">— Noivos</span></div>
+      <div class="testi-card"><div class="stars">★★★★★</div><p>“Interação impecável, repertório personalizado. Todos na pista do início ao fim.”</p><span style="color:#a28bb8;">— Debutante</span></div>
+      <div class="testi-card"><div class="stars">★★★★★</div><p>“Profissionalismo e tecnologia de ponta. Superou todas as expectativas.”</p><span style="color:#a28bb8;">— Empresa</span></div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats">
+      <div class="stat-item"><span class="stat-number">+600</span><div class="stat-label">Eventos realizados</div></div>
+      <div class="stat-item"><span class="stat-number">100%</span><div class="stat-label">Clientes satisfeitos</div></div>
+      <div class="stat-item"><span class="stat-number">5★</span><div class="stat-label">Avaliações</div></div>
+      <div class="stat-item"><span class="stat-number">+1000</span><div class="stat-label">Pessoas animadas</div></div>
+    </div>
+
+    <!-- AWARDS + MARCAS -->
+    <div class="awards">
+      <div><i class="fas fa-trophy" style="font-size:2.8rem; color:#e4c27a;"></i> <span style="font-weight:700; font-size:1.6rem; color:#f2e6ff;">Casamentos Awards 2026</span></div>
+      <div><span style="color:#c7b0e3;">🏆 5 opiniões · Casamentos.com.br</span></div>
+      <div><span style="background:#1d1825; padding:10px 28px; border-radius:100px; border:1px solid #624a7a;">⭐ Excelência reconhecida</span></div>
+    </div>
+
+    <div style="text-align:center; margin: 20px 0 10px; color:#a28bb8;"><i class="fas fa-building"></i> Grandes marcas confiam</div>
+    <div class="client-logos">
+      <span>Heineken</span> <span>ESEEVENTOS</span> <span>Jota Quest</span> <span>Beach Tennis</span> <span>Hotéis</span>
+    </div>
+
+    <!-- CTA FINAL -->
+    <div class="glass-card" style="padding: 36px 40px; margin: 30px 0; text-align:center;">
+      <h2 style="font-size:2.8rem; font-weight:700; letter-spacing:-1px;">Vamos transformar seu evento em um <span style="background:linear-gradient(145deg,#f2d9ff,#c59df0); -webkit-background-clip:text; background-clip:text; color:transparent;">ESPETÁCULO</span>?</h2>
+      <p style="font-size:1.2rem; margin: 20px 0; color:#ccc0dd;">Solicite um orçamento personalizado.</p>
+      <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px 40px; font-size:1.1rem; margin-top:20px;">
+        <span><i class="fab fa-instagram" style="color:#b392d6;"></i> @djpupo.oficial</span>
+        <span><i class="fas fa-phone" style="color:#b392d6;"></i> (13) 99774-0039</span>
+        <span><i class="fas fa-phone" style="color:#b392d6;"></i> (11) 94243-5768</span>
+        <span><i class="fas fa-envelope" style="color:#b392d6;"></i> comercial@pupoproducoes.com.br</span>
+      </div>
+      <a href="#" class="btn-glow" style="margin-top:30px;"><i class="fas fa-paper-plane"></i> QUERO UM ORÇAMENTO</a>
+    </div>
+
+    <footer class="footer">
+      <div>© 2026 DJ PUPO Produções · Todos os direitos reservados.</div>
+      <div><a href="#"><i class="fab fa-instagram"></i></a> <a href="#"><i class="fab fa-youtube"></i></a> <a href="#"><i class="fab fa-spotify"></i></a></div>
+    </footer>
+
+  </div>
 </body>
 </html>
